@@ -5,14 +5,28 @@
     box-sizing: border-box;
 }
 body{
-    background: #e3e8e3;
+    background: #13141386;
+}
+.time{
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 .card1{
-    width: 90%;
+    width: 100%;
     max-width: 1024px;
     background:linear-gradient(140deg, #e80505, #0c2f70);
     color: aliceblue;
-    margin: 100px auto 0;
+    margin: 10px auto 0;
+    border-radius: 30px;
+    padding: 40px 40px;
+    text-align: center;
+}
+.card2{
+    width: 100%;
+    max-width: 1024px;
+    background:linear-gradient(140deg, #0c2f70, #e80505);
+    color: aliceblue;
+    margin: 10px auto 0;
     border-radius: 30px;
     padding: 40px 40px;
     text-align: center;
