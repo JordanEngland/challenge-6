@@ -7,6 +7,9 @@
 body{
     background: #13141386;
 }
+.header{
+    font-size: 36px;
+}
 .time{
     font-size: 20px;
     padding-bottom: 10px;
@@ -30,7 +33,9 @@ body{
     border-radius: 30px;
     padding: 40px 40px;
     text-align: center;
+    justify-content: space-between;
 }
+
 .search{
     width: 100%;
     display: flex;
@@ -87,7 +92,7 @@ body{
     text-align:left;
 }
 .col img{
-    width: 50px;
+    width: 60px;
     margin-right: 20px;
 }
 .wind, .humidity{
