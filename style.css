@@ -25,6 +25,9 @@ body{
     text-align: center;
 }
 .card2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     width: 100%;
     max-width: 1024px;
     background:linear-gradient(140deg, #0c2f70, #e80505);
@@ -33,7 +36,50 @@ body{
     border-radius: 30px;
     padding: 40px 40px;
     text-align: center;
-    justify-content: space-between;
+}
+
+.forecast {
+    grid-column: 1 / -1;
+}
+
+.forecast-container {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol {
+    width: 50px;
+    height: 50px;
+}
+
+.card3{
+    width: 100%;
+    max-width: 1024px;
+    background:linear-gradient(140deg, #e80505, #0c2f70);
+    color: aliceblue;
+    margin: 10px auto 0;
+    border-radius: 30px;
+    padding: 40px 40px;
+    text-align:center;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.forecast-day {
+    text-align: center;
 }
 
 .search{
@@ -99,3 +145,4 @@ body{
     font-size: 30px;
     margin-top: 10px;
 }
+

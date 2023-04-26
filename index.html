@@ -18,21 +18,21 @@
             <button><img src="images/search.png"></button>
             </div>
             <div class="weather">
-                <img src="images/rain.png" class="weather-icon">
-                <h1 class="temperature">75°F</h1>
-                <h2 class="city">Hutchinson</h2>
+                <img src="images/rain.png" class="weathericon">
+                <h1 class="temperature">--°F</h1>
+                <h2 class="city">--</h2>
                 <div class="details">
                     <div class="col">
                         <img src="images/wind.png">
                         <div>
-                            <p class="wind">22mph</p>
+                            <p class="wind">--mph</p>
                             <p>Wind Speed</p>
                         </div>
                     </div>
                         <div class="col">
                         <img src="images/humidity.png">
                         <div>
-                            <p class="humidity">80%</p>
+                            <p class="humidity">--%</p>
                             <p>Humidity</p>
                         </div>
                     </div>
@@ -41,36 +41,64 @@
         </div>
     </div>
     <div class="card2">
-    <h1 class="forecast">5 Day Forecast</h1>
+        <h1 class="forecast">3 Hour Outlook</h1>
         <div class="forecast-container">
         <div class="forecast-day">
-            <p class="day">Mon</p>
-            <img src="images/cloudy.png" class="symbol">
-            <p class="temperature">72°F</p>
-        </div>
-        <div class="forecast-day">
-            <p class="day">Tue</p>
+            <p class="time">9:00 AM</p>
             <img src="images/sunny.png" class="symbol">
             <p class="temperature">80°F</p>
         </div>
         <div class="forecast-day">
+            <p class="time">12:00 PM</p>
+            <img src="images/cloudy.png" class="symbol">
+            <p class="temperature">75°F</p>
+        </div>
+        <div class="forecast-day">
+            <p class="time">3:00 PM</p>
+            <img src="images/rain.png" class="symbol">
+            <p class="temperature">70°F</p>
+        </div>
+        <div class="forecast-day">
+            <p class="time">6:00 PM</p>
+            <img src="images/cloudy.png" class="symbol">
+            <p class="temperature">65°F</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="card3">
+        <h1 class="forecast">5 Day Forecast</h1>
+        <div class="forecast-container">
+        <div class="forecast-day">
+            <p class="day">Mon</p>
+            <img src="images/cloudy.png" class="symbol">
+            <p class="temperature"><span class="high">72°F</span>/<span class="low">50°F</span></p>
+        </div>
+        <div class="forecast-day">
+            <p class="day">Tue</p>
+            <img src="images/sunny.png" class="symbol">
+            <p class="temperature"><span class="high">80°F</span>/<span class="low">55°F</span></p>
+        </div>
+        <div class="forecast-day">
             <p class="day">Wed</p>
             <img src="images/rain.png" class="symbol">
-            <p class="temperature">65°F</p>
+            <p class="temperature"><span class="high">65°F</span>/<span class="low">45°F</span></p>
         </div>
         <div class="forecast-day">
             <p class="day">Thu</p>
             <img src="images/sunny.png" class="symbol">
-            <p class="temperature">82°F</p>
+            <p class="temperature"><span class="high">82°F</span>/<span class="low">60°F</span></p>
         </div>
         <div class="forecast-day">
             <p class="day">Fri</p>
             <img src="images/cloudy.png" class="symbol">
-            <p class="temperature">70°F</p>
+            <p class="temperature"><span class="high">70°F</span>/<span class="low">48°F</span></p>
         </div>
         </div>
     </div>
+
 </div>
     <script src="script.js"></script>
 </body>
 </html>
+
