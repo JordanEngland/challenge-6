@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const apiKey = "e6045ed476404c7301fa015e7d168a41";
 
-// Load weather data for current location
+
 window.addEventListener("load", () => {
   const searchButton = document.querySelector(".search button");
     searchButton.addEventListener("click", searchByCity);
@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
   }
 });
 
-// Load weather data for city entered in search bar
+
 function searchByCity() {
   const place = document.querySelector(".search input").value;
   const urlsearch = `https://api.openweathermap.org/data/2.5/weather?q=${place}&units=imperial&appid=${apiKey}`;
@@ -48,7 +48,7 @@ function searchByCity() {
   document.querySelector(".search input").value = "";
 }
 
-// Display weather data in HTML
+
 function weatherReport(data) {
   const temperature = Math.round(data.main.temp);
   const city = data.name;
@@ -56,14 +56,14 @@ function weatherReport(data) {
   const humidity = data.main.humidity;
   const weatherIcon = getWeatherIcon(data.weather[0].main);
 
-  // Current weather
+
   document.querySelector(".temperature").textContent = `${temperature}°F`;
   document.querySelector(".city").textContent = city;
   document.querySelector(".weathericon").setAttribute("src", weatherIcon);
   document.querySelector(".wind").textContent = `${wind} mph`;
   document.querySelector(".humidity").textContent = `${humidity}%`;
 
-  // Future weather
+
   const urlcast = `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&units=imperial&appid=${apiKey}`;
   fetch(urlcast)
     .then((res) => {
@@ -75,7 +75,7 @@ function weatherReport(data) {
       const futureForecast = document.querySelector(".week");
       futureForecast.innerHTML = "";
 
-      // Loop through forecast data and display each day's forecast
+
       for (let i = 0; i < forecastList.length; i += 8) {
         const forecast = forecastList[i];
         const date = new Date(forecast.dt * 1000).toDateString();
@@ -95,7 +95,6 @@ function weatherReport(data) {
     });
 }
 
-// Map weather conditions to icons
 function getWeatherIcon(weatherCondition) {
   let icon = "";
   switch (weatherCondition) {
@@ -108,19 +107,19 @@ function getWeatherIcon(weatherCondition) {
     case "Drizzle":
       icon = "images/drizzle.png";
       break;
-      case "Humidity":
+    case "Humidity":
       icon = "images/humidity.png";
       break;
     case "Mist":
       icon = "images/mist.png";
       break;
-      case "Rain":
+    case "Rain":
       icon = "images/rain.png";
       break;
-      case "Snow":
+    case "Snow":
       icon = "images/snow.png";
       break;
-      case "Wind":
+    case "Wind":
       icon = "images/wind.png";
       break;
   }
